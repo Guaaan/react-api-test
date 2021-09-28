@@ -19,7 +19,7 @@ function App() {
         <ul>
           { ! todos ? 'cargando...':
             todos.map( (todo, index)=>{
-              return <li>{todo.title}</li>
+              return <li key={index}>{todo.title} {todo.completed ? '✅':'❌'} </li>
             })
           }
         </ul>
